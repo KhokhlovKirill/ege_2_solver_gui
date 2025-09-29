@@ -29,7 +29,6 @@ def make_table():
     if is_false_enabled.get() == 0 and is_true_enabled.get() == 0:
         render_table(truth_table.get_results(truth_table.least_common))
         return
-    print(res)
     render_table(truth_table.get_results(res))
 
 def solve():
