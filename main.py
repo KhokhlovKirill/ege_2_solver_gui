@@ -7,8 +7,8 @@ from TruthTable import TruthTable
 truth_table = None
 
 def format_exp(exp):
-    exp = exp.replace('∧', ' ∧ ').replace('∨', ' ∨ ').replace('≡', ' ≡ ').replace('→', ' → ')
-    exp = exp.replace('∧', 'and').replace('∨', 'or').replace('≡', '==').replace('→', '<=').replace('¬', 'not ')
+    exp = exp.replace('∧', ' ∧ ').replace('∨', ' ∨ ').replace('≡', ' ≡ ').replace('→', ' → ').replace('¬', ' ¬ ')
+    exp = exp.replace('∧', 'and').replace('∨', 'or').replace('≡', '==').replace('→', '<=').replace('¬', '1-')
     return exp
 
 def render_table(table):
@@ -46,8 +46,6 @@ def solve():
 root = Tk()
 root.title('Решатель задания №2 ЕГЭ по информатике')
 root.geometry('900x500')
-root.minsize(900, 500)
-root.maxsize(900, 500)
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
 root.grid_columnconfigure(1, weight=0)
